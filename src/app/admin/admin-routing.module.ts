@@ -5,11 +5,13 @@ import { AdministrationBlockComponent } from './administration-block/administrat
 import { MenuComponent } from './menu/menu.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ComplOrdersComponent } from './compl-orders/compl-orders.component';
+import { ItemComponent } from './item/item.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'Administration-Block',component:AdministrationBlockComponent,
     children:[{path:'menu',component:MenuComponent},
+      {path:'item',component:ItemComponent},
               {path:'orders',component:OrdersComponent},
               {path:'compl-orders',component:ComplOrdersComponent}
     ]},

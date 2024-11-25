@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FirebaseService } from '../../firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -9,5 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
+  constructor(public memus:FirebaseService){}
+  // ngOnInit(){
+  //   this.memus.getData().then((menuItems) => {
+  //   console.log("Menu Items: ", menuItems);
+  //   }).catch((error) => {
+  //     console.error("Error: ", error);
+  //   });
 }

@@ -1,0 +1,39 @@
+<p>item works!</p>
+
+<p *ngIf="itemtype=='add'">
+   enter name of item:<input type="text" [(ngModel)]="name">
+enter price of item:<input type="number" [(ngModel)]="price">
+enter category of item:<select [(ngModel)]="category" >
+   <option value="Beverages">Beverages</option>
+   <option value="Combos">Combos</option>
+   <option value="snacks">snacks</option>
+   <option value="popcorn">popcorn</option>
+   <option value="pastry & Icecream">pastry & Icecream</option>
+</select>
+<!-- enter category of item:<input type="text" [(ngModel)]="category"> -->
+<button (click)="newitem()">add-item</button>
+<button (click)="back()">cancel</button>
+</p>
+
+
+<p *ngIf="itemtype=='edit'">enter name of item:<input type="text" [(ngModel)]="name">
+enter price of item:<input type="number" [(ngModel)]="price" >
+enter category of item:<select [(ngModel)]="category" >
+   <option value="Beverages">Beverages</option>
+   <option value="Combos">Combos</option>
+   <option value="snacks">snacks</option>
+   <option value="popcorn">popcorn</option>
+   <option value="pastry & Icecream">pastry & Icecream</option>
+</select>
+<button (click)="update()"> update</button>
+<button (click)="back()">cancel</button></p>
+
+<p *ngIf="itemtype=='delete'">
+name of item:{{name}}
+price of item:{{price}}
+category of item:{{category}}
+<button (click)="deletee()" >delete</button>
+<button (click)="back()">cancel</button>
+</p>
+
+

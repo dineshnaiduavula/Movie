@@ -1,1 +1,9 @@
 <p>menu works!</p>
+<button routerLink="../item" [queryParams]="{'type':'add'}">item</button>
+<p *ngFor="let a of menudata">
+    {{a.menudat.name}}
+    {{a.menudat.category}}
+    {{a.menudat.price}}
+    <button routerLink="../item" [queryParams]="{'type':'edit'}" (click)="id(a.id)">edit-item</button>
+    <button routerLink="../item" [queryParams]="{'type':'delete'}" (click)="id(a.id)">delete-item</button>
+</p>
