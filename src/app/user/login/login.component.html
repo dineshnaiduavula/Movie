@@ -1,2 +1,5 @@
 <p>login works!</p>
-<a routerLink="menu">login</a>
+enter name<input type="text" [(ngModel)]="name">
+enter phone number<input type="number" [(ngModel)]="phone">
+enter seat number<input type="text" [(ngModel)]="seat">
+<button (click)="login()">login</button>

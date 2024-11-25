@@ -1,1 +1,7 @@
 <p>item1 works!</p>
+<p *ngFor="let a of menudata">
+    <ng-container *ngIf="a.menudat.category === cattype">
+      {{ a.menudat.name }} - {{ a.menudat.category }} - {{ a.menudat.price }}
+    </ng-container>
+  </p>
+  

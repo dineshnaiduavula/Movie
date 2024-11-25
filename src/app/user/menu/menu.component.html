@@ -1,7 +1,9 @@
 <p>menu works!</p>
-<a routerLink="item1">item1</a>
-<a routerLink="item2">item2</a>
-<a routerLink="item3">item3</a>
-<a routerLink="item4">item4</a>
-<a routerLink="/User/order">order</a>
+<button routerLink="item1" [queryParams]="{'cattype':'beverages'}">beverages</button>
+<button routerLink="item1" [queryParams]="{'cattype':'Combos'}">Combos</button>
+<button routerLink="item1" [queryParams]="{'cattype':'snacks'}">snacks</button>
+<button routerLink="item1" [queryParams]="{'cattype':'popcorn'}">popcorn</button>
+<button routerLink="item1" [queryParams]="{'cattype':'pastry & Icecream'}">pastry & Icecream</button>
+
+<button routerLink="/User/order">order</button>
 <router-outlet></router-outlet>
