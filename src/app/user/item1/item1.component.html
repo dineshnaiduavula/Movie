@@ -1,7 +1,11 @@
 <p>item1 works!</p>
 <p *ngFor="let a of menudata">
-    <ng-container *ngIf="a.menudat.category === cattype">
-      {{ a.menudat.name }} - {{ a.menudat.category }} - {{ a.menudat.price }}
+    <ng-container *ngIf="a.category === cattype">
+      {{ a.name }} - {{ a.category }} - {{ a.price }}
+      <button (click)="add(a.id)" *ngIf="a.value==0">Add</button>
+      <button (click)="minus(a.id)" *ngIf="a.value>=1">minus</button>
+      <span *ngIf="a.value>=1">{{a.value}}</span>
+      <button (click)="plus(a.id)" *ngIf="a.value>=1">plus</button>
     </ng-container>
   </p>
   
