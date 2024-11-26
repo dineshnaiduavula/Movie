@@ -1,2 +1,12 @@
 <p>order works!</p>
-<a routerLink="/User/menu">menu</a>
+<button (click)="menu()">menu</button>
+
+<p *ngFor="let a of menudata">
+    <ng-container *ngIf="a.value >=1">
+      {{ a.name }} - {{ a.category }} - {{ a.price * a.value}}
+      <button (click)="minus(a.id)" >minus</button>
+      <span >{{a.value}}</span>
+      <button (click)="plus(a.id)">plus</button>
+    </ng-container>
+  </p>
+  

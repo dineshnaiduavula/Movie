@@ -18,6 +18,7 @@ const db = getFirestore(app);
 export class FirebaseService {
   idnumber:any
   firestore: any;
+  placeOrder:any=[];
   //get admin user id and pass
   async getAdminIdPass() {
     try {
