@@ -65,6 +65,24 @@ export class FirebaseService {
     return "success" }
     catch(error){console.error("error pushing data")
       throw error}}
+  //geting order data
+  async getorderdata(){
+    const querySnapshot = await getDocs(collection(db, "Orders"));
+    const data :any= [];
+    querySnapshot.forEach((doc) => {
+      data.push({id: doc.id, 
+        menudat:doc.data()});});
+        return data;}
+  //upadte order data
+  async orderUpdate(a:any){
+    try{
+      const updatedata = doc(db,"Orders",a.id);
+      await updateDoc(updatedata,a.ddd);
+          return updatedata;}
+          catch (error) {
+            console.error("Error updating data: ", error);
+            throw error;}
+  }
   //update data
   async update(a:any){
     try{

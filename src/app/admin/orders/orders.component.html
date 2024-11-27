@@ -1,1 +1,10 @@
 <p>orders works!</p>
+<p *ngFor="let a of menudata">
+    <span *ngIf="a.menudat.dd[0].orderstatus=='uncompl'">
+    name: {{a.menudat.dd[0].name}}
+    phone:{{a.menudat.dd[0].phone}}
+    seat:{{a.menudat.dd[0].seat}}
+    totalprice:{{a.menudat.dd[0].totalPayment}}
+    <button (click)="done(a.id)">Done</button>
+    </span>
+</p>

@@ -1,1 +1,9 @@
 <p>compl-orders works!</p>
+<p *ngFor="let a of menudata">
+    <span *ngIf="a.menudat.dd[0].orderstatus=='compl'">
+    name: {{a.menudat.dd[0].name}}
+    phone:{{a.menudat.dd[0].phone}}
+    seat:{{a.menudat.dd[0].seat}}
+    totalprice:{{a.menudat.dd[0].totalPayment}}
+    </span>
+</p>
