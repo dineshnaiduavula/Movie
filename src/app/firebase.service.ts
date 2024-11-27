@@ -75,13 +75,16 @@ export class FirebaseService {
         return data;}
   //upadte order data
   async orderUpdate(a:any){
-    try{
+     try{
       const updatedata = doc(db,"Orders",a.id);
-      await updateDoc(updatedata,a.ddd);
-          return updatedata;}
+      console.log(updatedata) 
+       await updateDoc(updatedata,{dd:a.menudat.dd
+       });
+       console.log('ssss')
+         return updatedata;}
           catch (error) {
             console.error("Error updating data: ", error);
-            throw error;}
+          throw error;}
   }
   //update data
   async update(a:any){

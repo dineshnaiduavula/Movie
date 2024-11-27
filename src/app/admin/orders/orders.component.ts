@@ -17,8 +17,10 @@ export class OrdersComponent {
       this.menudata=f
       console.log(this.menudata)})}
   done(a:any){
-    
-    //await this.ser.orderUpdate(a)
-    console.log(a)
+    let z=this.menudata.find((u:any)=>u.id==a)
+    z.menudat.dd[0].orderstatus='compl'
+    console.log(z.menudat)
+     this.ser.orderUpdate(z)
+    console.log(z)
   }
 }
