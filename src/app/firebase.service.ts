@@ -19,6 +19,7 @@ export class FirebaseService {
   idnumber:any
   firestore: any;
   placeOrder:any=[];
+  userLoginDetails:any
   //get admin user id and pass
   async getAdminIdPass() {
     try {
@@ -56,7 +57,14 @@ export class FirebaseService {
           console.error("Error fetching data: ", error);
           throw error;
       }}
-
+  //addding order data
+    async addorder(dd:any){
+      try{
+      const docref=await addDoc(collection(db,'Orders'),{dd})
+      console.log("success")
+    return "success" }
+    catch(error){console.error("error pushing data")
+      throw error}}
   //update data
   async update(a:any){
     try{

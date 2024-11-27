@@ -20,7 +20,8 @@ export class LoginComponent {
   //   }).catch((error) => {
   //     console.error("Error: ", error);
   //   });
-  login(){
+  async login(){
+    this.memus.userLoginDetails={'name':this.name,'phone':this.phone,'seat':this.seat}
     console.log(this.name+""+this.phone)
     //code
     this.route.navigate(['User/menu'])
