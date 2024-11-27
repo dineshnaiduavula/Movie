@@ -61,7 +61,7 @@ export class FirebaseService {
     async addorder(dd:any){
       try{
       const docref=await addDoc(collection(db,'Orders'),{dd})
-      console.log("success")
+      console.log("success order will arrive shortly........tnxs")
     return "success" }
     catch(error){console.error("error pushing data")
       throw error}}
